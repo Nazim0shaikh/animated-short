@@ -6,6 +6,7 @@ TITLE="${1:-video}"
 OUT="out/${TITLE}.mp4"
 N=$(ls frames/f*.jpg | wc -l)
 echo "frames: $N"
+mkdir -p out
 (cd audio && python3 finish_audio.py mix.wav ../out/final_audio.wav)
 ffmpeg -y -v error -framerate 30 -i frames/f%04d.jpg -i out/final_audio.wav -map 0:v:0 -map 1:a:0 \
   -c:v libx264 -preset veryfast -crf 17 -pix_fmt yuv420p -c:a aac -b:a 256k -ar 48000 -movflags +faststart -shortest "$OUT"
