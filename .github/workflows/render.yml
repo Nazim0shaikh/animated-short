@@ -37,6 +37,7 @@ jobs:
         run: |
           cd audio
           python3 audio.py ../voice.mp3 .
+          python3 mix.py ../voice.mp3 music.wav sfx.wav mix.wav
         working-directory: ${{ github.workspace }}
         env:
           PYTHONPATH: ${{ github.workspace }}/audio
