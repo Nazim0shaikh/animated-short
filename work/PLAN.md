@@ -1,0 +1,14 @@
+# Shot Plan: The Candy Bar That Started Microwaves
+
+Audio: `voice.mp3` (37.7 s, 1132 frames @ 30 fps)  
+Format: 1080x1920 (9:16 vertical), 30 fps
+
+| Shot | Frames | Duration | Spoken Words | Shot Type / Setting | Lighting | Camera Motion | Characters & Props | Effects & SFX Cue |
+|---|---|---|---|---|---|---|---|---|
+| **1. hook** | 0–120 | 4.0 s (120 f) | "One melted candy bar helped spark the microwave oven." | MCU on lab bench & pocket level | Neutral daytime lab | Slow push-in toward pocket & bar | Percy in 1940s work attire; candy bar softening in pocket | Chocolate squish sound, faint lab hum |
+| **2. lab** | 120–390 | 9.0 s (270 f) | "In nineteen forty-five, engineer Percy Spencer was working with radar equipment when he noticed the chocolate in his pocket had softened." | Wide to Medium two-shot; Raytheon radar lab | Industrial lab day with blue tube glow | Dolly track across bench toward Percy | Percy inspecting magnetron rig; colleague taking notes; melted chocolate revealed | Magnetron drone, electrical buzz, whoosh |
+| **3. popcorn** | 390–522 | 4.4 s (132 f) | "He tested the strange effect with popcorn kernels. They popped." | Close insert on dish in front of waveguide | Direct overhead workbench light | Gentle drift in, camera kick on pop at f488 | Dish of golden kernels near waveguide horn; Percy peering in | Popcorn pops (f488): burst fx, fluffy popped kernels scatter |
+| **4. egg** | 522–625 | 3.4 s (103 f) | "Then he tried an egg. It burst." | MCU on egg test setup | Dramatic lab spot | Fast push-in; impact shake on burst at f579 | Whole raw egg on pedestal; Percy & coworker leaning back | Egg shudder (f560), explosion splat (f579), yellow/white splatter fx |
+| **5. discovery**| 625–767 | 4.7 s (142 f) | "Spencer realized the equipment’s invisible energy could cook food." | Medium profile / explanation | Blue night/scientific explanation tone | Smooth gliding arc around Spencer | Percy smiling in realization ("Aha!"), pointing to magnetron | Pulsing cyan electromagnetic wave rings, warm insight chime |
+| **6. prototype**| 767–1018 | 8.4 s (251 f) | "His team developed the idea into an oven—but the first model stood six feet tall and weighed more than seven hundred fifty pounds." | Dramatic wide vertical tilt | High-contrast industrial floor | Crane upward and tilt down to reveal the towering height | Monstrous 6ft, 750lb "Radarange" steel monolith with 6ft height scale tick marks; Percy for scale | Heavy industrial clank, deep steel hum, steam hiss |
+| **7. payoff** | 1018–1132| 3.8 s (114 f) | "A pocket-sized accident led to a kitchen giant." | Wide two-element contrast composition | Warm golden victory light | Creeping push-in with 2° roll to lock | Foreground: little candy bar on bench; Background: towering giant oven; Percy proud | Twist musical sting, low resolved chord to fade |

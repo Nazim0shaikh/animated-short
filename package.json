@@ -1,0 +1,9 @@
+{
+  "name": "microwave-short",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "playwright": "^1.65.0",
+    "three": "^0.160.0"
+  }
+}

@@ -1,0 +1,19 @@
+<!doctype html><html><body style="margin:0;background:#9fb7d6">
+<canvas id="c" width="2400" height="2200"></canvas>
+<script type="module">
+import * as T from "./toon.js"; import * as C from "./castdefs.js";
+const g = document.getElementById("c").getContext("2d");
+const cell = (i, j, fn, w = 600, h = 1000) => { g.save(); g.translate(i * 480 - 60, j * 1080 + 40); g.scale(0.8, 0.8); g.translate((600 - w) / 2, 1000 - h); fn(new T.Pen(g)); g.restore(); };
+const L = -Math.PI * 2 / 3;
+cell(0, 0, (p) => T.bodyFrontX(p, C.PERCY, { expr: "squint", armR: "pocket", armL: "hang", seed: 3, light: L }));
+cell(1, 0, (p) => T.bodyFrontX(p, C.PERCY_LAB, { expr: "shock", armR: "temple", armL: "belly", seed: 3, light: L }));
+cell(2, 0, (p) => T.bodyFrontX(p, C.PERCY_LAB, { expr: "smile", armR: "point", armL: "hip", seed: 3, light: L }));
+cell(3, 0, (p) => T.bodyFrontX(p, C.COWORKER, { expr: "neutral", armR: "chin", armL: "hang", seed: 11, light: L }));
+cell(4, 0, (p) => T.bodyFrontX(p, C.COWORKER, { expr: "shock", armR: "up", armL: "belly", seed: 11, light: L }));
+cell(0, 1, (p) => T.bodySideX(p, C.PERCY, { mode: "walk", phase: 0.15, expr: "squint", seed: 3, light: L }));
+cell(1, 1, (p) => T.bodySideX(p, C.PERCY_LAB, { mode: "stand", expr: "smile", seed: 3, light: L }));
+cell(2, 1, (p) => T.bodySideX(p, C.COWORKER, { mode: "walk", phase: 0.6, expr: "neutral", seed: 11, light: L }));
+cell(3, 1, (p) => T.bodyFrontX(p, C.PERCY_LAB, { expr: "soft", armR: "hip", armL: "hip", seed: 3, light: L }));
+cell(4, 1, (p) => T.bodyFrontX(p, C.PERCY, { expr: "curious", armR: "point", armL: "pocket", seed: 3, light: L }));
+window.done = true;
+</script></body></html>

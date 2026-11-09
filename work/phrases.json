@@ -1,0 +1,112 @@
+[
+ {
+  "text": "One melted candy bar helped spark the microwave oven.",
+  "start": 0.08,
+  "end": 3.37,
+  "f0": 2,
+  "f1": 101,
+  "segments": [
+   0,
+   1
+  ]
+ },
+ {
+  "text": "In nineteen forty-five,",
+  "start": 4.01,
+  "end": 5.46,
+  "f0": 120,
+  "f1": 164,
+  "segments": [
+   1,
+   2
+  ]
+ },
+ {
+  "text": "engineer Percy Spencer was working with radar equipment when he noticed the chocolate in his pocket had softened.",
+  "start": 5.65,
+  "end": 12.34,
+  "f0": 170,
+  "f1": 370,
+  "segments": [
+   2,
+   3
+  ]
+ },
+ {
+  "text": "He tested the strange effect with popcorn kernels.",
+  "start": 13.0,
+  "end": 15.83,
+  "f0": 390,
+  "f1": 475,
+  "segments": [
+   3,
+   4
+  ]
+ },
+ {
+  "text": "They popped.",
+  "start": 16.28,
+  "end": 17.03,
+  "f0": 488,
+  "f1": 511,
+  "segments": [
+   4,
+   5
+  ]
+ },
+ {
+  "text": "Then he tried an egg.",
+  "start": 17.4,
+  "end": 18.86,
+  "f0": 522,
+  "f1": 566,
+  "segments": [
+   5,
+   6
+  ]
+ },
+ {
+  "text": "It burst.",
+  "start": 19.31,
+  "end": 20.21,
+  "f0": 579,
+  "f1": 606,
+  "segments": [
+   6,
+   7
+  ]
+ },
+ {
+  "text": "Spencer realized the equipment\u00e2\u20ac\u2122s invisible energy could cook food.",
+  "start": 20.82,
+  "end": 24.94,
+  "f0": 625,
+  "f1": 748,
+  "segments": [
+   7,
+   8
+  ]
+ },
+ {
+  "text": "His team developed the idea into an oven\u00e2\u20ac\u201dbut the first model stood six feet tall and weighed more than seven hundred fifty pounds.",
+  "start": 25.58,
+  "end": 33.77,
+  "f0": 767,
+  "f1": 1013,
+  "segments": [
+   8,
+   10
+  ]
+ },
+ {
+  "text": "A pocket-sized accident led to a kitchen giant.",
+  "start": 34.24,
+  "end": 37.51,
+  "f0": 1027,
+  "f1": 1125,
+  "segments": [
+   10,
+   11
+  ]
+ }
+]

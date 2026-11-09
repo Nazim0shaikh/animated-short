@@ -1,0 +1,72 @@
+name: Render Animated Short
+
+on:
+  workflow_dispatch:          # run manually from the Actions tab
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120      # 2 h safety cap
+
+    steps:
+      # ── 1. Checkout ───────────────────────────────────────────────────────
+      - uses: actions/checkout@v4
+
+      # ── 2. Node + npm ci ──────────────────────────────────────────────────
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install npm deps
+        run: npm ci
+
+      # ── 3. Playwright Chromium ────────────────────────────────────────────
+      - name: Install Playwright Chromium
+        run: npx playwright install chromium --with-deps
+
+      # ── 4. Python deps (numpy + scipy for audio) ─────────────────────────
+      - name: Install Python deps
+        run: pip install numpy scipy
+
+      # ── 5. Generate audio stems ───────────────────────────────────────────
+      - name: Build audio
+        run: |
+          cd audio
+          python3 audio.py ../voice.mp3 .
+        working-directory: ${{ github.workspace }}
+        env:
+          PYTHONPATH: ${{ github.workspace }}/audio
+
+      # note: finish_audio.py is called inside finish.sh
+
+      # ── 6. Render all frames ──────────────────────────────────────────────
+      - name: Render frames (1132 frames @ 30 fps)
+        run: |
+          mkdir -p frames
+          node render.mjs frames "0-1131"
+        env:
+          # Disable GPU sandbox inside the CI container
+          PLAYWRIGHT_CHROMIUM_SANDBOX: "false"
+
+      # ── 7. Verify frame count ─────────────────────────────────────────────
+      - name: Check frame count
+        run: |
+          COUNT=$(ls frames/f*.jpg | wc -l)
+          echo "Rendered $COUNT frames"
+          [ "$COUNT" -eq 1132 ] || (echo "WRONG COUNT" && exit 1)
+
+      # ── 8. Mux video ─────────────────────────────────────────────────────
+      - name: Mux final video
+        run: bash finish.sh "MicrowaveShort"
+
+      # ── 9. Upload output artifacts ────────────────────────────────────────
+      - name: Upload video
+        uses: actions/upload-artifact@v4
+        with:
+          name: MicrowaveShort
+          path: |
+            out/MicrowaveShort.mp4
+            out/qa_sheet.jpg
+            out/final_audio.wav
+          retention-days: 90

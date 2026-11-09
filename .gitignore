@@ -1,0 +1,11 @@
+node_modules/
+frames/
+stills/
+out/
+audio/__pycache__/
+__pycache__/
+audio/mix.wav
+audio/music.wav
+audio/sfx.wav
+*.pyc
+.DS_Store
